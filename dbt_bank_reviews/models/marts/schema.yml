@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fact_reviews
+    description: "Central fact table containing enriched banking notifications"
+    columns:
+      - name: review_id
+        description: "Unique primary key for the review"
+        tests:
+          - unique
+          - not_null
+      
+      - name: bank_id
+        description: "Foreign key to the Bank dimension"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_bank')
+              field: bank_id
+
+      - name: topic_id
+        description: "Foreign key to the Topic dimension"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_topic')
+              field: topic_id
+
+  - name: dim_bank
+    columns:
+      - name: bank_id
+        tests:
+          - unique
+          - not_null

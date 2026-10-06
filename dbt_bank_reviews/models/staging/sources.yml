@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: staging_source
+    database: "{{ env_var('DBNAME') }}"
+    schema: staging
+    tables:
+      - name: reviews_raw
+      - name: enriched_reviews
