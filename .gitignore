@@ -1,0 +1,31 @@
+
+Environnement et secrets:
+.env
+dbt_bank_reviews/profiles.yml
+dbt_bank_reviews/.user.yml
+
+
+Fichiers compilés Python :
+
+pycache/
+*.pyc
+*.pyo
+*.pyd
+*.vscode
+Logs et fichiers temporaires :
+
+logs/
+dbt_bank_reviews/logs/
+
+
+Fichiers générés par dbt:
+
+dbt_bank_reviews/target/
+dbt_bank_reviews/dbt_packages/
+
+
+Outils et IDE :
+
+.vscode/
+.ipynb_checkpoints/
+
